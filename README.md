@@ -6,8 +6,9 @@
 PX4 Autopilot & QGroundControl:
 Follow the official documentation to install the necessary tools.
 
-[PX4 Autopilot]([url](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu))
-[QGroundControl]([url](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html))
+PX4 Autopilot:https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu
+
+QGroundControl:https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
 
 ROS 2 & Gazebo Bridge:
 This guide assumes you are using ROS 2 Humble with Gazebo Harmonic.
@@ -16,6 +17,9 @@ bash
 
 sudo apt install ros-humble-ros-gz-harmonic
 ```
+
+
+
 
 PX4 ROS 2 Messages:
 Clone and build the px4_msgs package in your ROS 2 workspace.
@@ -35,6 +39,11 @@ cd ..
 colcon build --packages-select px4_msgs
 ```
 
+
+
+
+
+
 Micro XRCE-DDS Agent:.
 
 Clone the repository:
@@ -47,9 +56,16 @@ bash
 git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
 ```
 
-**NOTE:1.After runing the above command open the directory Micro-XRCE-DDS-Agent in VScode(or in text editor)
-     2.Go to CMakeLists.txt  Line 99 
-     3.change set(_fastdds_tag 2.12.x) to set(_fastdds_tag v2.12.1) then run rest of commands**
+**NOTE:**
+
+**1.After runing the above command open the directory Micro-XRCE-DDS-Agent in VScode(or in file manger)**
+
+
+**2.Go to CMakeLists.txt file  Line 99** 
+
+
+**3.change set(_fastdds_tag 2.12.x) to set(_fastdds_tag v2.12.1) then run rest of commands**
+
 
 Build and install:
 
@@ -67,12 +83,27 @@ sudo ldconfig /usr/local/lib/
 ```
 
 
+
+
+
+
 **2. Setting Up the Simulation World**
 
 Navigate to the PX4 Gazebo files:
-1.open PX4-Autopilot directory
-2.go to tools>simulation>gz>models and replace the OakD-Lite.urdf file with the file(with the same name) given in this git repo
-3.go to tools>simulation>gz>worlds and replace the aruco.urdf file with the file(with the same name) given in this git repo.
+
+
+1.open PX4-Autopilot directory.
+
+
+2.go to tools>simulation>gz>models>OakD-Lite and replace the model.sdf file with the file(with the same name) given in this git repo.
+
+
+3.go to tools>simulation>gz>worlds and replace the aruco.sdf file with the file(with the same name) given in this git repo.
+
+
+
+
+
 
 **3. Running the Simulation**
 Step 1: Launch PX4 with Gazebo
@@ -93,14 +124,21 @@ Launch the QGroundControl AppImage.
 Bash
 
 /path/to/QGroundControl-x86_64.AppImage
-(Note: Replace /path/to/ with the actual location of your AppImage, e.g., ~/Downloads/)
+(Note: Replace /path/to/ with the actual location of your AppImage, e.g., ~/Downloads/  in most cases it will be /Downloads)
 ```
 Wait for the message INFO [commander] Ready for takeoff! in the Px4 terminal.
 
 Takeoff: Press the Up arrow key on your keyboard and press Enter to initiate takeoff. The drone in the simulation should ascend.
 
 
+
+
+
+
+
 4.Bridging Topics
+
+
 **A.Gazebo to ROS 2 Bridge**
 This bridge connects the camera feed from Gazebo to a ROS 2 topic, allowing you to visualize it in RViz.
 
