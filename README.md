@@ -28,7 +28,7 @@ This guide assumes you are using ROS 2 Humble with Gazebo Harmonic.
 ```
 bash
 
-sudo apt install ros-humble-ros-gz-harmonic
+sudo apt install ros-humble-ros-gzharmonic
 ```
 
 
