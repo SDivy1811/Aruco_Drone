@@ -195,3 +195,24 @@ ros2 topic list
 
 ```
 
+# TASK
+
+Now that your PX4-Gazebo-ROS2 integration is working, complete the following:
+
+1. **Write a ROS 2 node/script** (Python or C++) that:  
+   - Subscribes to the camera image topic.  
+   - Detects the **ArUco marker** in the image.  
+
+2. **Compute control commands**:  
+   - Publish **setpoints** on appropriate topics so that the drone moves above the marker.  
+   - Once aligned, issue a **land command** to descend and land on the marker.  
+
+3. **Coordinate System Note**:  
+   - PX4 expects setpoints in the **NED (North-East-Down)** coordinate frame.  
+   - ROS 2 and Gazebo usually work in **ENU (East-North-Up)** coordinates.  
+   - You must convert correctly before publishing setpoints.  
+   - Research ENU vs. NED carefully to avoid incorrect commands.  
+
+---
+
+By completing this task, you’ll have a working pipeline that uses **computer vision** + **ROS 2 control commands** to autonomously land a simulated drone on an ArUco marker.  
