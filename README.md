@@ -3,6 +3,19 @@
 **1. Prerequisites and Installation**
 
 
+Gazebo Harmonic installation:
+```
+bash
+# Add Gazebo repository
+sudo wget https://packages.osrfoundation.org/gazebo.asc -P /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" > /etc/apt/sources.list.d/gazebo-stable.list'
+
+# Update and install
+sudo apt update
+sudo apt install ros-humble-ros-gzharmonic
+```
+
+
 PX4 Autopilot & QGroundControl:
 Follow the official documentation to install the necessary tools.
 
