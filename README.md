@@ -125,6 +125,7 @@ Bash
 
 /path/to/QGroundControl-x86_64.AppImage
 (Note: Replace /path/to/ with the actual location of your AppImage, e.g., ~/Downloads/  in most cases it will be /Downloads)
+(OR JUST DOUBLE CLICK FROM THE FILE EXPLORER)
 ```
 Wait for the message INFO [commander] Ready for takeoff! in the Px4 terminal.
 
