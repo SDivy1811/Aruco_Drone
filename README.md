@@ -19,7 +19,7 @@ sudo apt install ros-humble-ros-gzharmonic
 PX4 Autopilot & QGroundControl:
 Follow the official documentation to install the necessary tools.
 
-PX4 Autopilot:https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu
+PX4 Autopilot:https://docs.px4.io/v1.14/en/dev_setup/dev_env_linux_ubuntu.html
 
 QGroundControl:https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
 
