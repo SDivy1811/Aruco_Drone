@@ -208,3 +208,8 @@ Bash
 ros2 topic list
 
 ```
+
+****Aruco detection****
+<img width="1920" height="1080" alt="ArUco Marker Detection_screenshot_19 01 2026" src="https://github.com/user-attachments/assets/ec00b3a2-e9aa-4372-a85c-c1779e08e788" />
+
+
